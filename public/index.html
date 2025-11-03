@@ -28,7 +28,19 @@
                     </div>
                     <div class="input-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" required>
+                            <span id="toggle-password" class="toggle-password-icon"></span>
+                        </div>
+                    </div>
+                    <div class="input-group level-group">
+                        <label for="level">Level</label>
+                        <select id="level" name="level">
+                            <option value="1">Level 1</option>
+                            <option value="2">Level 2</option>
+                            <option value="3">Level 3</option>
+                            <option value="admin">Admin</option>
+                        </select>
                     </div>
                     <button type="submit">Login</button>
                 </form>

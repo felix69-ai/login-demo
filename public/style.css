@@ -107,6 +107,19 @@ input:checked + .slider:before {
     width: 100%;
 }
 
+
+.main-container.demo-active > .card:first-child {
+    order: 2; /* Manual login */
+}
+
+.main-container.demo-active > .demo-features {
+    order: 1; /* Brute-force demo */
+}
+
+.main-container.demo-active > .log-card {
+    order: 3; /* Log */
+}
+
 .demo-features {
     flex: 1;
 }
@@ -138,6 +151,10 @@ h2 {
     gap: 0.5rem;
 }
 
+.level-group {
+    margin-bottom: 1.5rem;
+}
+
 label {
     font-weight: 500;
     color: var(--label-color);
@@ -145,7 +162,8 @@ label {
 
 input[type="text"],
 input[type="password"],
-input[type="file"] {
+input[type="file"],
+select {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--border-color);
@@ -164,6 +182,27 @@ input[type="password"]:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(54, 125, 255, 0.2);
 }
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password-icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-password-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--label-color);
+    display: block;
+}
+
 
 button {
     width: 100%;
